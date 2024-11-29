@@ -1,0 +1,157 @@
+/* Estilos generales para dispositivos grandes */
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+}
+
+  /* Header */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+	background-color: #FE8F1C;;
+	color: white;
+}
+
+header .logo img {
+	max-width: 150px;
+}
+
+header nav ul {
+	display: flex;
+	list-style: none;
+	gap: 1em;
+}
+
+header nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+header .search {
+	display: flex;
+	align-items: center;
+}
+
+header .search input {
+	padding: 0.5em;
+	border-radius: 5px;
+}
+
+header .search button {
+	margin-left: 0.5em;
+	padding: 0.5em;
+	background-color: #555;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+  /* Main content */
+.recipe-card {
+	display: flex;
+	gap: 2em;
+}
+
+.recipe-card img {
+	border-radius: 5px;
+}
+
+.about-img img {
+	width: 60%;
+	border-radius: 5px;
+}
+
+.recipe-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.recipe-item {
+	width: calc(33.333% - 1em);
+	text-align: center;
+}
+
+.recipe-item img {
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 1em;
+}
+
+  /* Estilos responsivos para dispositivos medianos (tabletas) */
+@media screen and (max-width: 768px) {
+	header {
+flex-direction: column;
+align-items: flex-start;
+	}
+
+	header nav ul {
+	flex-direction: column;
+	gap: 0.5em;
+	}
+
+	header .search {
+	width: 100%;
+	margin-top: 1em;
+	}
+
+	.recipe-card {
+	flex-direction: column;
+	align-items: center;
+	}
+
+	.recipe-gallery {
+	flex-direction: row;
+	}
+
+	.about-img, .about-text {
+	text-align: center;
+	}
+}
+
+  /* Estilos responsivos para dispositivos pequeños (móviles) */
+@media screen and (max-width: 480px) {
+	header .logo img {
+	max-width: 120px;
+	}
+
+	header nav ul li {
+	margin: 0.5em 0;
+	}
+
+	header .search input {
+	width: 100%;
+	}
+
+	.recipe-card img {
+	max-width: 100%;
+	}
+
+	.recipe-item {
+	width: 100%;
+	}
+
+	.about-img img, .recipe-item img {
+	max-width: 100%;
+	}
+
+	footer p {
+	font-size: 0.9em;
+	}
+	footer .footer-social-icons a {
+	font-size: 0.9em;
+	display: inline-block;
+	margin: 0 0.5em;
+	}
+}
+
